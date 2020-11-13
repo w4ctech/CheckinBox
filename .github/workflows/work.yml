@@ -1,8 +1,12 @@
 name: 'run'
 
 on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
   schedule:
-    - cron: '30 16 * * *'
+    - cron: 0 2,14 * * *
   workflow_dispatch:
 
 jobs:
